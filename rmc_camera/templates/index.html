@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rover</title>
+  </head>
+  <body>
+    <div class="flex flex-col items-center my-2">
+      <img
+        class="w-1/12 mb-4"
+        src="https://beachlunabotics.org/wp-content/uploads/2021/05/LBL_Logo.png"
+      />
+      <img class="w-3/5 aspect-video" src="{{ url_for('video_feed') }}" />
+    </div>
+  </body>
+</html>
