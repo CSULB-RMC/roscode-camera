@@ -1,0 +1,57 @@
+running egg_info
+creating build/rmc_camera/rmc_camera.egg-info
+writing build/rmc_camera/rmc_camera.egg-info/PKG-INFO
+writing dependency_links to build/rmc_camera/rmc_camera.egg-info/dependency_links.txt
+writing entry points to build/rmc_camera/rmc_camera.egg-info/entry_points.txt
+writing requirements to build/rmc_camera/rmc_camera.egg-info/requires.txt
+writing top-level names to build/rmc_camera/rmc_camera.egg-info/top_level.txt
+writing manifest file 'build/rmc_camera/rmc_camera.egg-info/SOURCES.txt'
+reading manifest file 'build/rmc_camera/rmc_camera.egg-info/SOURCES.txt'
+writing manifest file 'build/rmc_camera/rmc_camera.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /ros/dev_ws/src/rmc_camera/build/rmc_camera/build
+creating /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib
+creating /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/registry.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/publisher_obstruction.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/__init__.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/image.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/test_video_feed.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/publisher_feed.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/subscriber_feed.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+copying rmc_camera/publisher_object_detection.py -> /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera
+running install
+running install_lib
+creating /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/registry.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/publisher_obstruction.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/__init__.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/image.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/test_video_feed.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/publisher_feed.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/subscriber_feed.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+copying /ros/dev_ws/src/rmc_camera/build/rmc_camera/build/lib/rmc_camera/publisher_object_detection.py -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/registry.py to registry.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/publisher_obstruction.py to publisher_obstruction.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/__init__.py to __init__.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/image.py to image.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/test_video_feed.py to test_video_feed.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/publisher_feed.py to publisher_feed.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/subscriber_feed.py to subscriber_feed.cpython-38.pyc
+byte-compiling /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera/publisher_object_detection.py to publisher_object_detection.cpython-38.pyc
+running install_data
+creating /ros/dev_ws/src/rmc_camera/install/rmc_camera/share/ament_index
+creating /ros/dev_ws/src/rmc_camera/install/rmc_camera/share/ament_index/resource_index
+creating /ros/dev_ws/src/rmc_camera/install/rmc_camera/share/ament_index/resource_index/packages
+copying resource/rmc_camera -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/share/ament_index/resource_index/packages
+copying package.xml -> /ros/dev_ws/src/rmc_camera/install/rmc_camera/share/rmc_camera
+running install_egg_info
+Copying build/rmc_camera/rmc_camera.egg-info to /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/python3.8/site-packages/rmc_camera-0.0.0-py3.8.egg-info
+running install_scripts
+Installing publisher_feed script to /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/rmc_camera
+Installing publisher_object_detection script to /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/rmc_camera
+Installing publisher_obstruction script to /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/rmc_camera
+Installing subscriber_feed script to /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/rmc_camera
+Installing test_video_feed script to /ros/dev_ws/src/rmc_camera/install/rmc_camera/lib/rmc_camera
+writing list of installed files to '/ros/dev_ws/src/rmc_camera/build/rmc_camera/install.log'

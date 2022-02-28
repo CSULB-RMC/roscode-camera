@@ -42,6 +42,10 @@ class FeedSubscriber(Node):
         )
 
         frame = self.bridge.imgmsg_to_cv2(msg)
+        frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)  # makes the frame greyscale
+        (thresh, frame) = cv.threshold(
+            frame, 100, 255, cv.THRESH_BINARY
+        )  # binary threshold to make a black and white image
         ret, buffer = cv.imencode(".jpg", frame)
         frame = buffer.tobytes()
 
@@ -62,18 +66,13 @@ def fetch_frame():
     """fetch last saved frame"""
     while True:
         frame = get_frame()
-        yield (
-            b"--frame\r\n"
-            b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n"
-        )
+        yield (b"--frame\r\n" b"Content-Type: image/jpeg\r\n\r\n" + frame + b"\r\n")
 
 
 @app.route("/video-feed")
 def video_feed():
     """get video feed as image files"""
-    return Response(
-        fetch_frame(), mimetype="multipart/x-mixed-replace; boundary=frame"
-    )
+    return Response(fetch_frame(), mimetype="multipart/x-mixed-replace; boundary=frame")
 
 
 @app.route("/")
