@@ -1,8 +1,6 @@
 import rclpy
 from rclpy.node import Node
 
-# using bytes
-# from std_msgs.msg import Byte
 from sensor_msgs.msg import Image
 
 import numpy as np
@@ -22,8 +20,6 @@ class FeedPublisher(Node):
         self.capture = cv.VideoCapture(self.VIDEO_FEED, self.VIDEO_DRIVER)
         self.bridge = CvBridge()
 
-        # using bytes
-        # self.publisher_ = self.create_publisher(Byte, 'camera_feed', 10)
         self.publisher_ = self.create_publisher(Image, "camera_feed", 10)
         self.timer = self.create_timer(self.TIMER_PERIOD, self.timer_callback)
 
@@ -37,9 +33,6 @@ class FeedPublisher(Node):
         if not ret:
             self.get_logger().error("camera not initialized")
 
-        # gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-        # using bytes
-        # self.publisher_.publish(gray.tobytes())
         self.publisher_.publish(self.bridge.cv2_to_imgmsg(frame))
         self.get_logger().info("sent camera feed")
 
