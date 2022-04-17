@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import Image
+from std_msgs.msg import Int8
 
 import numpy as np
 import cv2 as cv
@@ -25,7 +26,18 @@ class FeedPublisher(Node):
         self.bridge = CvBridge()
 
         self.publisher_ = self.create_publisher(Image, "camera_feed", 10)
+        self.cameraid_subscriber = self.create_subscription(Int8, "camera_id", self.camera_setup, 10)
         self.timer = self.create_timer(self.TIMER_PERIOD, self.timer_callback)
+
+        self.cameraid_subscriber
+
+    def camera_setup(self, msg):
+        self.VIDEO_FEED = "/dev/video" + str(msg.data)
+        self.capture = cv.VideoCapture(self.VIDEO_FEED, self.VIDEO_DRIVER)
+
+        self.capture.set(3, 256)
+        self.capture.set(4, 144)
+        
 
     def timer_callback(self):
         """
