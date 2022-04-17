@@ -49,8 +49,9 @@ class FeedPublisher(Node):
         if not ret:
             self.get_logger().error("camera not initialized")
 
-        self.publisher_.publish(self.bridge.cv2_to_imgmsg(frame))
-        self.get_logger().info("sent camera feed")
+        if type(frame) is np.ndarray:
+            self.publisher_.publish(self.bridge.cv2_to_imgmsg(frame))
+            self.get_logger().info("sent camera feed")
 
 
 def main(args=None):
