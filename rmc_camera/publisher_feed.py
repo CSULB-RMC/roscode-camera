@@ -18,6 +18,10 @@ class FeedPublisher(Node):
         super().__init__("publisher_feed")
         # opencv camera capture
         self.capture = cv.VideoCapture(self.VIDEO_FEED, self.VIDEO_DRIVER)
+
+        self.capture.set(3, 256)
+        self.capture.set(4, 144)
+
         self.bridge = CvBridge()
 
         self.publisher_ = self.create_publisher(Image, "camera_feed", 10)
